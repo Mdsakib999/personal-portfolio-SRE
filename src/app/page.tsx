@@ -1,5 +1,6 @@
 import About from "@/components/Home/About";
 import Banner from "@/components/Home/Banner";
+import Quote from "@/components/Home/Quote";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="">
       <Banner/>
       <About/>
+      <Quote/>
     </div>
   );
 }
