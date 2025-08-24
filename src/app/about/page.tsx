@@ -1,8 +1,19 @@
+import AboutSection from "@/components/About/AboutSection";
+import Quote from "@/components/About/Quote";
+import RevenueStats from "@/components/About/RevenueStats";
+import Values from "@/components/About/Values";
+import VenturesOverview from "@/components/About/VenturesOverview";
+import ContactForm from "@/components/Shared/ContactForm";
+
 export default function page() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
-      <h1 className="text-4xl font-bold mb-4">About Page</h1>
-      <p className="text-lg text-gray-700">This is the about page content.</p>
+    <div className="">
+      <AboutSection />
+      <Values />
+      <RevenueStats />
+      <VenturesOverview />
+      <Quote />
+      <ContactForm />
     </div>
   );
 }

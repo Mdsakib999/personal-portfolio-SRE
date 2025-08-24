@@ -32,7 +32,7 @@ const ventures = [
 
 export default function Journey() {
   return (
-    <div className="relative max-w-7xl mx-auto pt-20">
+    <div className="relative max-w-7xl mx-auto pt-20 px-6">
       <h1 className="text-5xl md:text-6xl font-semibold mb-16">
         Journey
       </h1>
