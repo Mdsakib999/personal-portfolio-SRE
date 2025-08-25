@@ -4,16 +4,48 @@ import { GridPattern } from "../magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("submit", form);
   };
 
   return (
-    <section className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative">
+    <section className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative overflow-x-hidden">
+      {/* --- LEFT / RIGHT blurred blobs (half off-screen) --- */}
+      <div aria-hidden="true" className="pointer-events-none -z-20">
+        {/* left blob: sits vertically centered, pushed left so half is off-canvas */}
+        <div
+          className={cn(
+            "absolute top-1/2 -translate-y-1/2",
+            "-left-36 md:-left-48",
+            "w-64 h-64 md:w-[360px] md:h-[360px]",
+            "rounded-full",
+            "bg-gradient-to-tr from-orange-300 via-purple-300 to-indigo-400",
+            "opacity-30 filter blur-3xl"
+          )}
+        />
+
+        {/* right blob: sits vertically centered, pushed right so half is off-canvas */}
+        <div
+          className={cn(
+            "absolute top-1/2 -translate-y-1/2",
+            "-right-36 md:-right-48",
+            "w-64 h-64 md:w-[310px] md:h-[360px]",
+            "rounded-full",
+            "bg-gradient-to-tr from-indigo-500 to-blue-300",
+            "opacity-25 filter blur-3xl"
+          )}
+        />
+      </div>
 
       <div
         // container that pins the pattern to the bottom half and applies a mask so it fades upward
@@ -45,45 +77,56 @@ export default function ContactForm() {
 
         <div className="w-full md:w-1/2 lg:w-2/5">
           <form onSubmit={handleSubmit} className="w-full">
-            <label className="block text-sm text-white/70 mb-2">Full Name</label>
+            <label className="block text-sm text-foreground/70 mb-2">
+              Full Name
+            </label>
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="w-full bg-transparent border-b border-white/20 py-3 placeholder-white/30 focus:outline-none focus:border-white transition-colors"
+              className="w-full bg-transparent border-b border-foreground/20 py-3 placeholder-foreground/30 focus:outline-none focus:border-foreground transition-colors"
             />
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
               <div>
-                <label className="block text-sm text-white/70 mb-2">Email</label>
+                <label className="block text-sm text-foreground/70 mb-2">
+                  Email
+                </label>
                 <input
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 py-3 placeholder-white/30 focus:outline-none focus:border-white transition-colors"
+                  className="w-full bg-transparent border-b border-foreground/20 py-3 placeholder-foreground/30 focus:outline-none focus:border-foreground transition-colors"
                 />
               </div>
               <div>
-                <label className="block text-sm text-white/70 mb-2">Phone</label>
+                <label className="block text-sm text-foreground/70 mb-2">
+                  Phone
+                </label>
                 <input
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 py-3 placeholder-white/30 focus:outline-none focus:border-white transition-colors"
+                  className="w-full bg-transparent border-b border-foreground/20 py-3 placeholder-foreground/30 focus:outline-none focus:border-foreground transition-colors"
                 />
               </div>
             </div>
             <div className="mt-6">
-              <label className="block text-sm text-white/70 mb-2">Message</label>
+              <label className="block text-sm text-foreground/70 mb-2">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full bg-transparent border-b border-white/20 py-3 resize-none placeholder-white/30 focus:outline-none focus:border-white transition-colors"
+                className="w-full bg-transparent border-b border-foreground/20 py-3 resize-none placeholder-foreground/30 focus:outline-none focus:border-foreground transition-colors"
               />
             </div>
             <div className="mt-8 flex justify-end">
-              <button type="submit" className="inline-flex items-center gap-2 border border-white/20 text-white/90 px-6 py-2 rounded-full text-sm hover:bg-white/5 transition">
+              <button
+                type="submit"
+                className="inline-flex items-center gap-2 border border-foreground/20 text-foreground/90 px-6 py-2 rounded-full text-sm hover:bg-foreground/5 transition"
+              >
                 Send
               </button>
             </div>

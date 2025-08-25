@@ -1,5 +1,3 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
@@ -7,7 +5,7 @@ import Newsletter from "@/components/Contact/NewsLetter";
 
 export default function ContactPage() {
   return (
-    <section className="py-20">
+    <section className="py-20 overflow-x-hidden relative">
       <div
         className={cn(
           "pointer-events-none absolute left-0 right-0 bottom-0 h-1/2 -z-10",
@@ -50,15 +48,18 @@ export default function ContactPage() {
         <div aria-hidden="true" className="pointer-events-none -z-10">
           {/* left blob */}
           <div
-            className="absolute left-1/2 md:left-10 -bottom-34 w-72 h-72 rounded-full
-                     bg-gradient-to-tr from-orange-300 via-orange-300 to-indigo-400
-                     opacity-30 filter blur-3xl transform -translate-x-1/2 md:translate-x-0"
+            className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2
+             w-72 h-72 md:w-[360px] md:h-[360px] rounded-full
+             bg-gradient-to-tr from-orange-300 via-purple-300 to-indigo-400
+             opacity-30 filter blur-3xl"
           />
+
           {/* right blob */}
           <div
-            className="absolute -right-2 -bottom-32 w-66 h-96 rounded-full
-                     bg-gradient-to-tr from-teal-200 to-blue-400
-                     opacity-25 filter blur-3xl"
+            className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2
+             w-64 h-64 md:w-[310px] md:h-[360px] rounded-full
+             bg-gradient-to-tr from-indigo-500 to-blue-300
+             opacity-25 filter blur-3xl"
           />
         </div>
 

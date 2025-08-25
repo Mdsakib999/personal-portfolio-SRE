@@ -70,7 +70,7 @@ export default function RevenueStats() {
 
                 {/* separator except after last */}
                 {idx < stats.length - 1 && (
-                  <div className="mt-6 border-t border-gray-200" />
+                  <div className="mt-6 border-t border-foreground/20 " />
                 )}
               </div>
             ))}
