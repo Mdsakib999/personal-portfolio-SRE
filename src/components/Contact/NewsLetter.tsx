@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Newsletter() {
@@ -24,35 +25,37 @@ export default function Newsletter() {
           </h2>
           <p className="text-foreground/40">Stay connected</p>
         </div>
-        <form className="flex  sm:flex-row gap-4">
-          <label className="block">
-            <span className="sr-only">Your Name</span>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full bg-transparent border-0 border-b-[1.5px] border-slate-300 placeholder:text-slate-400 py-3 text-lg outline-none transition-colors
+        <div className="flex">
+          <form className="flex  gap-4">
+            <label className="block">
+              <span className="sr-only">Your Name</span>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full bg-transparent border-0 border-b-[1.5px] border-slate-300 placeholder:text-slate-400 py-3 text-lg outline-none transition-colors
                        focus:border-sky-600 focus:placeholder:text-slate-300"
-              aria-label="Your Name"
-            />
-          </label>
-          <label className="block">
-            <span className="sr-only">Your Name</span>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full bg-transparent border-0 border-b-[1.5px] border-slate-300 placeholder:text-slate-400 py-3 text-lg outline-none transition-colors
+                aria-label="Your Name"
+              />
+            </label>
+            <label className="block">
+              <span className="sr-only">Your Email</span>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full bg-transparent border-0 border-b-[1.5px] border-slate-300 placeholder:text-slate-400 py-3 text-lg outline-none transition-colors
                        focus:border-sky-600 focus:placeholder:text-slate-300"
-              aria-label="Your Name"
-            />
-          </label>
+                aria-label="Your Email"
+              />
+            </label>
 
-          <Button
-            type="submit"
-            className="bg-[#0f1b2a] text-white rounded-full px-6"
-          >
-            →
-          </Button>
-        </form>
+            <Button
+              type="submit"
+              className="bg-[#0f1b2a] text-white rounded-full "
+            >
+              <ArrowRight className="" />
+            </Button>
+          </form>
+        </div>
       </div>
     </div>
   );
