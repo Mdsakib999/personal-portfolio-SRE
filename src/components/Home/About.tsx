@@ -1,5 +1,7 @@
 import Image from "next/image";
-
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Button } from "../ui/button";
+import Link from "next/link";
 export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 h-screen flex flex-col md:flex-row items-center justify-center gap-12 ">
@@ -7,8 +9,32 @@ export default function About() {
       <div className="flex-1">
         <h2 className="text-5xl md:text-6xl font-semibold mb-6">About</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
-          Passionate about creating applications that make everyday life feel a bit lighter—tools that just work, quietly in the background.
+          Passionate about creating applications that make everyday life feel a
+          bit lighter tools that just work, quietly in the background.
         </p>
+        <div className="flex pt-10 gap-4">
+          <a
+            href="#"
+            className="p-2 rounded-full border hover:bg-foreground/10"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full border hover:bg-foreground/10"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full border hover:bg-foreground/10"
+          >
+            <FaTwitter />
+          </a>
+        </div>
+        <Link href="/contact">
+          <Button className="rounded-full mt-6 px-6 py-2">Contact Us</Button>
+        </Link>
       </div>
 
       {/* Image */}

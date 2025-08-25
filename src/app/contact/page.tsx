@@ -34,13 +34,22 @@ export default function ContactPage() {
           </div>
           {/* socials */}
           <div className="flex flex-col gap-4">
-            <a href="#" className="p-2 rounded-full border hover:bg-gray-100">
+            <a
+              href="#"
+              className="p-2 rounded-full border hover:bg-foreground/10"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" className="p-2 rounded-full border hover:bg-gray-100">
+            <a
+              href="#"
+              className="p-2 rounded-full border hover:bg-foreground/10"
+            >
               <FaInstagram />
             </a>
-            <a href="#" className="p-2 rounded-full border hover:bg-gray-100">
+            <a
+              href="#"
+              className="p-2 rounded-full border hover:bg-foreground/10"
+            >
               <FaTwitter />
             </a>
           </div>
