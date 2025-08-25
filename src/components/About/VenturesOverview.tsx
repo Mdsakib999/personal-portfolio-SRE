@@ -81,7 +81,7 @@ export default function VenturesOverview() {
 
               {/* separator except after last */}
               {idx < VENTURES.length - 1 && (
-                <hr className="border-t border-slate-200" />
+                <hr className="border-t border-foreground/20 " />
               )}
             </div>
           ))}
