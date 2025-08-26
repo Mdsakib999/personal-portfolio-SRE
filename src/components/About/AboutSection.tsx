@@ -35,7 +35,7 @@ export default function AboutSection() {
             src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
           />
         </div>
-        <p className="text-lg text-foreground/80 mb-6 max-w-xl text-right">
+        <p className="text-lg text-foreground/80 mb-6 max-w-xl text-start md:text-right">
           passionate about creating applications that make everyday life feel a
           bit lighter—tools that just work, quietly in the background.passionate
           about creating applications that make everyday life feel a bit
