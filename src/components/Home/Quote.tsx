@@ -4,9 +4,9 @@ import { GridBeams } from "../magicui/grid-beams";
 
 export default function Quote() {
   return (
-    <div className="mt-18 py-10 md:px-12">
+    <div className="py-10 md:px-12">
       <div className="w-full h-screen flex items-center justify-center px-4 py-10 pt-10">
-        <div className="relative h-[580px] w-full overflow-hidden rounded-lg border">
+        <div className="relative h-[86vh] w-full overflow-hidden rounded-lg border">
           <GridBeams
             gridSize={0}
             gridColor="rgba(255, 255, 255, 0.2)"
@@ -18,9 +18,9 @@ export default function Quote() {
             gridFadeEnd={90}
             className="h-full w-full"
           >
-            <div className="flex h-full items-center justify-center">
+            <div className="flex h-full items-center justify-center ">
               <div className="text-center space-y-6 px-4 mt-50">
-                <h1 className="text-3xl md:text-5xl font-semibold text-white leading-tight">
+                <h1 className="text-4xl md:text-5xl font-semibold text-white leading-tight">
                   “Creating tools that make life easier, one line of code at a
                   time.”
                 </h1>

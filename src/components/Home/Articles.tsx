@@ -1,54 +1,44 @@
 import React from "react";
 import ArticleRow from "./ArticleRow";
 
-
 export default function Articles() {
   const sampleArticles = [
     {
       id: 1,
       year: "2025",
       title: "Urban\nwest\nDevelopment",
-      image: "/images/article-1.jpg",
-      href: "/articles/urban-west-1",
+      image: "/img/article-img-1.png",
+      href: "",
     },
     {
       id: 2,
-      year: "2025",
+      year: "2020",
       title: "Urban\nwest\nDevelopment",
-      image: "/images/article-2.jpg",
+      image: "/img/article-img-2.png",
       href: "/articles/urban-west-2",
     },
     {
       id: 3,
       year: "2025",
       title: "Urban\nwest\nDevelopment",
-      image: "/images/article-3.jpg",
-      href: "/articles/urban-west-3",
+      image: "/img/article-img-1.png",
+      href: "",
     },
     {
       id: 4,
       year: "2025",
       title: "Urban\nwest\nDevelopment",
-      image: "/images/article-4.jpg",
-      href: "/articles/urban-west-4",
+      image: "/img/article-img-2.png",
+      href: "",
     },
     {
       id: 5,
-      year: "2025",
+      year: "2022",
       title: "Urban\nwest\nDevelopment",
-      image: "/images/article-5.jpg",
-      href: "/articles/urban-west-5",
-    },
-    {
-      id: 6,
-      year: "2025",
-      title: "Urban\nwest\nDevelopment",
-      image: "/images/article-6.jpg",
-      href: "/articles/urban-west-6",
+      image: "/img/article-img-1.png",
+      href: "",
     },
   ];
-
-
 
   return (
     <section className="min-h-screen py-10 ">

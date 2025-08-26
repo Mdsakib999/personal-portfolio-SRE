@@ -1,7 +1,5 @@
-// components/VenturesOverview.tsx
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
-
 type Venture = {
   id: string;
   year: string;
@@ -18,7 +16,7 @@ export default function VenturesOverview() {
       year: "2025",
       title: "SM FOODS",
       desc: "Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.",
-      image: "/images/venture-1.jpg",
+      image: "/img/project-1.png",
       imageAlt: "colorful product hero",
     },
     {
@@ -26,7 +24,7 @@ export default function VenturesOverview() {
       year: "2024",
       title: "SM Cars",
       desc: "Cut through the yawns, grab your audience’s attention, and turn passive attendees into active participants.",
-      image: "/images/venture-2.jpg",
+      image: "/img/project-2.png",
       imageAlt: "dark UI grid mockups",
     },
     {
@@ -34,7 +32,7 @@ export default function VenturesOverview() {
       year: "2023",
       title: "Analyze",
       desc: "Track the success of your events with deep insights and analytics measured across the entire attendee experience.",
-      image: "/images/venture-3.jpg",
+      image: "/img/project-1.png",
       imageAlt: "analytics dashboard preview",
     },
   ];
@@ -44,7 +42,7 @@ export default function VenturesOverview() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:items-start">
         {/* Heading on the right for large screens */}
         <header className="lg:col-start-9 lg:col-span-4 text-left lg:text-right">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+          <h2 className="text-5xl md:text-5xl lg:text-6xl font-semibold leading-tight">
             Ventures at a <br className="hidden md:inline" /> Glance
           </h2>
         </header>

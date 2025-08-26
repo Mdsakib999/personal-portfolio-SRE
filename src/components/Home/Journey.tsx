@@ -9,7 +9,7 @@ const ventures = [
       {
         name: "SM Foods",
         desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/path/to/image1.png",
+        img: "/img/article-img-2.png",
       },
     ],
   },
@@ -19,12 +19,12 @@ const ventures = [
       {
         name: "SM Travel",
         desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/path/to/image2.png",
+        img: "/img/article-img-1.png",
       },
       {
         name: "SM Auto",
         desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/path/to/image3.png",
+        img: "/img/article-img-2.png",
       },
     ],
   },
@@ -33,9 +33,7 @@ const ventures = [
 export default function Journey() {
   return (
     <div className="relative max-w-7xl mx-auto pt-20 px-6">
-      <h1 className="text-5xl md:text-6xl font-semibold mb-16">
-        Journey
-      </h1>
+      <h1 className="text-5xl md:text-6xl font-semibold mb-16">Journey</h1>
 
       <div className="relative">
         <GridPattern
@@ -51,7 +49,10 @@ export default function Journey() {
 
         <div className="space-y-10 max-w-5xl mx-auto">
           {ventures.map((venture) => (
-            <div key={venture.year} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              key={venture.year}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
               {/* Year */}
               <div className="text-2xl font-light ">{venture.year}</div>
 
@@ -81,7 +82,7 @@ export default function Journey() {
             </div>
           ))}
 
-{/* CTA */}
+          {/* CTA */}
           <div className="flex justify-center pt-10">
             <button className="px-6 py-3 bg-white text-black rounded-full shadow hover:scale-105 transition">
               Explore More

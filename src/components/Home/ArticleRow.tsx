@@ -22,9 +22,9 @@ const ArticleRow: React.FC<{ article: Article }> = ({ article }) => {
       >
         <Card className="bg-transparent shadow-none border-none">
           <CardContent className="p-0">
-            <div className="flex items-start justify-between  gap-8">
-              <div className="flex items-start gap-6 min-w-0 ">
-                <div className="text-sm text-foreground/80 w-14 flex-shrink-0">
+            <div className="flex items-start justify-between  md:gap-8">
+              <div className="flex items-start gap-2  lg:gap-6 min-w-0 ">
+                <div className="text-sm text-foreground/80 md:w-14 flex-shrink-0">
                   {article.year}
                 </div>
 
