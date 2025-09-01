@@ -1,44 +1,47 @@
 import React from "react";
 import ArticleRow from "./ArticleRow";
+import { getSortedPostsData } from "../../../lib/posts";
 
 export default function Articles() {
-  const sampleArticles = [
-    {
-      id: 1,
-      year: "2025",
-      title: "Urban\nwest\nDevelopment",
-      image: "/img/article-img-1.png",
-      href: "",
-    },
-    {
-      id: 2,
-      year: "2020",
-      title: "Urban\nwest\nDevelopment",
-      image: "/img/article-img-2.png",
-      href: "/articles/urban-west-2",
-    },
-    {
-      id: 3,
-      year: "2025",
-      title: "Urban\nwest\nDevelopment",
-      image: "/img/article-img-1.png",
-      href: "",
-    },
-    {
-      id: 4,
-      year: "2025",
-      title: "Urban\nwest\nDevelopment",
-      image: "/img/article-img-2.png",
-      href: "",
-    },
-    {
-      id: 5,
-      year: "2022",
-      title: "Urban\nwest\nDevelopment",
-      image: "/img/article-img-1.png",
-      href: "",
-    },
-  ];
+  // const sampleArticles = [
+  //   {
+  //     id: 1,
+  //     year: "2025",
+  //     title: "Urban\nwest\nDevelopment",
+  //     image: "/img/article-img-1.png",
+  //     href: "",
+  //   },
+  //   {
+  //     id: 2,
+  //     year: "2020",
+  //     title: "Urban\nwest\nDevelopment",
+  //     image: "/img/article-img-2.png",
+  //     href: "/articles/urban-west-2",
+  //   },
+  //   {
+  //     id: 3,
+  //     year: "2025",
+  //     title: "Urban\nwest\nDevelopment",
+  //     image: "/img/article-img-1.png",
+  //     href: "",
+  //   },
+  //   {
+  //     id: 4,
+  //     year: "2025",
+  //     title: "Urban\nwest\nDevelopment",
+  //     image: "/img/article-img-2.png",
+  //     href: "",
+  //   },
+  //   {
+  //     id: 5,
+  //     year: "2022",
+  //     title: "Urban\nwest\nDevelopment",
+  //     image: "/img/article-img-1.png",
+  //     href: "",
+  //   },
+  // ];
+  const posts = getSortedPostsData() || [];
+  const topFive = posts.slice(0, 5);
 
   return (
     <section className="min-h-screen py-10 ">
@@ -54,25 +57,11 @@ export default function Articles() {
           </div>
 
           {/* First article */}
-          <div>
-            <ArticleRow article={sampleArticles[0]} />
-          </div>
-          {/* Second article */}
-          <div>
-            <ArticleRow article={sampleArticles[1]} />
-          </div>
-          {/* Third article */}
-          <div>
-            <ArticleRow article={sampleArticles[2]} />
-          </div>
-          {/* Fourth article */}
-          <div>
-            <ArticleRow article={sampleArticles[3]} />
-          </div>
-          {/* Fifth article */}
-          <div>
-            <ArticleRow article={sampleArticles[4]} />
-          </div>
+          {topFive.map((post) => (
+            <div key={post.id}>
+              <ArticleRow article={post} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
