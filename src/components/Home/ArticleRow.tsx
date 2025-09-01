@@ -1,31 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import { Card, CardContent } from "@/components/ui/card";
 
 type Article = {
-  id: number;
-  year: string;
+  id: string;
+  date: string;
   title: string;
   image: string;
-  href: string;
 };
 
-const ArticleRow: React.FC<{ article: Article }> = ({ article }) => {
+const ArticleRow: React.FC<{ article?: Article }> = ({ article }) => {
+  if (!article) return null;
+
   return (
     <article>
       <div className="border-t border-zinc-600/40 mb-6" />
-      <Link
-        href={article.href}
-        aria-label={article.title.replace(/\n/g, " ")}
-        className="group block"
-      >
+      <Link href={`/articles/${article.id}`} className="group block">
         <Card className="bg-transparent shadow-none border-none">
           <CardContent className="p-0">
             <div className="flex items-start justify-between  md:gap-8">
               <div className="flex items-start gap-2  lg:gap-6 min-w-0 ">
                 <div className="text-sm text-foreground/80 md:w-14 flex-shrink-0">
-                  {article.year}
+                  {article.date}
                 </div>
 
                 <h3
@@ -36,7 +32,6 @@ const ArticleRow: React.FC<{ article: Article }> = ({ article }) => {
                 </h3>
               </div>
 
-              {/* Right: thumbnail */}
               <div className="w-46 h-30 md:w-58 md:h-38 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-700/50">
                 <Image
                   src={article.image}
@@ -45,7 +40,6 @@ const ArticleRow: React.FC<{ article: Article }> = ({ article }) => {
                   height={280}
                   className="w-full h-full object-cover"
                   sizes="(max-width: 768px) 30vw, 160px"
-                  priority={false}
                 />
               </div>
             </div>
