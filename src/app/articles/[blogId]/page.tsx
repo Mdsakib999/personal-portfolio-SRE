@@ -18,11 +18,8 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function BlogPage({
-  params,
-}: {
-  params: { blogId: string };
-}) {
+export default async function BlogPage(props: any) {
+  const { params } = props as { params: { blogId: string } };
   const postsDirectory = path.join(process.cwd(), "public", "blogs");
   const fullPath = path.join(postsDirectory, `${params.blogId}.md`);
 
