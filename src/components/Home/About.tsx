@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 h-screen flex flex-col md:flex-row items-center justify-center gap-12 mt-16">
       {/* Text content */}
-      <div className="flex-1 justify-items-center md:justify-items-start">
+      <div className="flex-1 justify-items-center md:justify-items-start ">
         <h2 className=" text-3xl sm:text-5xl md:text-6xl font-semibold mb-6">
           About
         </h2>
