@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <div className="relative h-screen  flex size-full items-center justify-center overflow-hidden rounded-lg bg-background p-20">
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
-        <h1 className="text-7xl font-semibold">Shahriar Rahman</h1>
+        <h1 className="text-7xl font-semibold">Shariar Rahaman</h1>
         <p className="text-xl text-muted-foreground m-4">Founder & CEO</p>
         <Button
           variant="outline"
