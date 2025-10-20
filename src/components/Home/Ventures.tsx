@@ -12,12 +12,12 @@ const slides = [
     image: "/img/slider-01.png",
   },
   {
-    title: "SaaS Platform",
+    title: "SM Travels",
     subtitle: "Dashboard",
     image: "/img/slider-02.png",
   },
   {
-    title: "E-Commerce",
+    title: "SM Auto",
     subtitle: "Website",
     image: "/img/slider-01.png",
   },
