@@ -19,7 +19,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative overflow-x-hidden">
+    <section id="contact" className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative overflow-x-hidden">
       {/* --- LEFT / RIGHT blurred blobs (half off-screen) --- */}
       <div aria-hidden="true" className="pointer-events-none -z-20">
         {/* left blob: sits vertically centered, pushed left so half is off-canvas */}

@@ -51,17 +51,17 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Travels
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Foods
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Auto
                   </Link>
                 </li>
@@ -74,19 +74,19 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     Facebook
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     Instagram
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                     Dribbble
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -97,17 +97,17 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/" className="hover:text-white">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#about" className="hover:text-white">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#contact" className="hover:text-white">
                     Contact
                   </Link>
                 </li>
