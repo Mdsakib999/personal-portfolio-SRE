@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 min-h-screen">
+    <section id="about" className="max-w-7xl mx-auto px-4 py-16 min-h-screen">
       <h2 className="text-5xl sm:text-6xl md:text-7xl  text-center mb-16">
         About
       </h2>
@@ -44,19 +44,25 @@ export default function About() {
           </p>
           <div className="flex pt-10 gap-4">
             <a
-              href="#"
+              href="https://www.facebook.com/smitsolution.uae"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/smitsolution.uae/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://x.com/smitsolutionuae"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaTwitter />

@@ -35,19 +35,25 @@ export default function ContactPage() {
           {/* socials */}
           <div className="flex flex-col gap-4">
             <a
-              href="#"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
               <FaTwitter />
