@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function About() {
   return (
@@ -65,7 +71,15 @@ export default function About() {
               rel="noopener noreferrer"
               className="p-2 rounded-full border hover:bg-foreground/10"
             >
-              <FaTwitter />
+              <FaXTwitter />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/smitsolution/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full border hover:bg-foreground/10"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </div>
