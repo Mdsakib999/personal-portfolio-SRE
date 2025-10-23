@@ -38,15 +38,18 @@ export default function About() {
 
         <div className="flex flex-col justify-center lg:pl-12 border-l-1 border-gray-300">
           <h3 className="text-2xl sm:text-3xl font-light mb-6">
-            Expert, user-friendly advice
+            The Entrepreneurial Journey
           </h3>
           <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            We provide our clients with the best prospect of success before
-            competition authorities and courts by understanding the competitive
-            reality of their industries. We combine this with rigorous economic
-            analysis, supported by facts and data, cutting edge techniques,
-            presented in clear and compelling expert reports. Our approach is
-            practical and user-friendly; we prioritise what matters.
+            Md Shariar Rahman is a self-made entrepreneur from Bangladesh,
+            widely recognized for his innovation-driven approach to business.
+            Starting with a passion for technology, he founded SM IT Solution, a
+            company focused on delivering modern digital solutions. Over the
+            years, his vision expanded into multiple industries including
+            travel, fashion, lifestyle, and automotive — creating a powerful
+            ecosystem under the SM Group brand. Beyond his ventures, he is
+            committed to inspiring young entrepreneurs and building a digital
+            future for Bangladesh.
           </p>
           <div className="flex pt-10 gap-4">
             <a

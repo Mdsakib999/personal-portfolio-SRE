@@ -17,11 +17,11 @@ export default function Quote() {
           <div className="relative z-10 h-full w-full flex items-center justify-center px-6">
             <div className="max-w-3xl text-center">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
-                “Creating tools that make life easier, one line of code at a
-                time.”
+                ““Entrepreneurship isn’t about running companies — it’s about
+                creating opportunities that outlive you.”
               </h1>
 
-              <p className="mt-6 text-lg text-gray-600">Founder &amp; CEO</p>
+              <p className="mt-6 text-lg text-gray-600">Md Shariar Rahman</p>
             </div>
           </div>
 
