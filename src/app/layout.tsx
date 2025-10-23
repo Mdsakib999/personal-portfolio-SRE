@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"], 
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,10 +36,10 @@ export default function RootLayout({
         className={`${dmSans.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-        <Navbar />
-         {children}
+          <Navbar />
+          {children}
         </ThemeProvider>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

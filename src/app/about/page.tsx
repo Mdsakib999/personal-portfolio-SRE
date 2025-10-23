@@ -1,4 +1,5 @@
 import AboutSection from "@/components/About/AboutSection";
+import MediaPress from "@/components/About/MediaPress";
 import Quote from "@/components/About/Quote";
 import RevenueStats from "@/components/About/RevenueStats";
 import Values from "@/components/About/Values";
@@ -12,6 +13,7 @@ export default function page() {
       <Values />
       <RevenueStats />
       <VenturesOverview />
+      <MediaPress />s
       <Quote />
       <ContactForm />
     </div>
