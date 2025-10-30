@@ -5,17 +5,17 @@ const ventures = [
   {
     title: "BiteBytes",
     subtitle: "Landing Page",
-    image: "/img/slider-01.png",
+    image: "/ventures/sm-bitebytes.png",
   },
   {
     title: "SM Automobiles",
-    subtitle: "Dashboard",
-    image: "/img/slider-02.png",
+    subtitle: "SAAS Platform",
+    image: "/ventures/sm-car.png",
   },
   {
-    title: "SM Foods",
-    subtitle: "Website",
-    image: "/img/slider-01.png",
+    title: "SM POS",
+    subtitle: "Dashboard",
+    image: "/ventures/sm-pos.png",
   },
 ];
 

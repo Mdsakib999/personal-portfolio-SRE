@@ -19,7 +19,7 @@ export default function VenturesOverview() {
       year: "2025",
       title: "BiteBytes",
       desc: "Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.",
-      image: "/img/project-1.png",
+      image: "/ventures/sm-bitebytes.png",
       imageAlt: "colorful product hero",
     },
     {
@@ -27,7 +27,7 @@ export default function VenturesOverview() {
       year: "2024",
       title: "SM Automobiles",
       desc: "Cut through the yawns, grab your audience’s attention, and turn passive attendees into active participants.",
-      image: "/img/project-2.png",
+      image: "/ventures/sm-car.png",
       imageAlt: "dark UI grid mockups",
     },
     {
@@ -35,7 +35,7 @@ export default function VenturesOverview() {
       year: "2023",
       title: "BY Transport Ltd.",
       desc: "Track the success of your events with deep insights and analytics measured across the entire attendee experience.",
-      image: "/img/project-1.png",
+      image: "/ventures/sm-pos.png",
       imageAlt: "analytics dashboard preview",
     },
   ];
@@ -71,11 +71,13 @@ export default function VenturesOverview() {
 
                 {/* Right: pill image spanning remaining cols */}
                 <div className="md:col-span-8 lg:col-span-8">
-                  <div 
+                  <div
                     className="rounded-[30px] overflow-hidden bg-white cursor-pointer"
                     onMouseEnter={() => setExpandedId(v.id)}
                     onMouseLeave={() => setExpandedId(null)}
-                    onClick={() => setExpandedId(expandedId === v.id ? null : v.id)}
+                    onClick={() =>
+                      setExpandedId(expandedId === v.id ? null : v.id)
+                    }
                   >
                     <Image
                       src={v.image}
@@ -83,9 +85,9 @@ export default function VenturesOverview() {
                       width={1200}
                       height={320}
                       className={`w-full object-cover transition-all duration-500 ease-in-out ${
-                        expandedId === v.id 
-                          ? 'h-[240px] sm:h-[280px] md:h-[320px] lg:h-[280px] scale-105' 
-                          : 'h-[140px] sm:h-[160px] md:h-[180px] lg:h-[140px] scale-100'
+                        expandedId === v.id
+                          ? "h-[240px] sm:h-[280px] md:h-[320px] lg:h-[280px] scale-105"
+                          : "h-[140px] sm:h-[160px] md:h-[180px] lg:h-[140px] scale-100"
                       }`}
                     />
                   </div>
