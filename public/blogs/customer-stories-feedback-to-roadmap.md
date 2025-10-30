@@ -6,7 +6,7 @@ slug: "customer-stories-feedback-to-roadmap"
 tags: ["customers", "product", "retention"]
 excerpt: "Real user feedback reshaped a core feature — here's the process we used to prioritize customer signals."
 readTime: 6
-image: "/img/article-img-1.png"
+image: "/img/article1.png"
 ---
 
 ## Start small, listen loudly

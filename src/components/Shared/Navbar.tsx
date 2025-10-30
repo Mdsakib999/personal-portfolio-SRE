@@ -19,7 +19,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const THRESHOLD = 80; 
+    const THRESHOLD = 80;
     let ticking = false;
 
     const onScroll = () => {
@@ -33,7 +33,9 @@ export default function Navbar() {
     };
 
     // run once on mount
-    setScrolled(typeof window !== "undefined" ? window.scrollY > THRESHOLD : false);
+    setScrolled(
+      typeof window !== "undefined" ? window.scrollY > THRESHOLD : false
+    );
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -44,10 +46,15 @@ export default function Navbar() {
     : "bg-transparent";
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}
+    >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="text-xl md:text-xl font-semibold tracking-tight hover:opacity-90">
+          <Link
+            href="/"
+            className="text-xl md:text-xl font-semibold tracking-tight hover:opacity-90"
+          >
             sr.
           </Link>
         </div>
@@ -67,7 +74,9 @@ export default function Navbar() {
                   <span
                     aria-hidden
                     className={`mr-2 inline-block w-2 h-2 rounded-full transition-all duration-200 transform ${
-                      isActive ? "opacity-100 bg-current scale-100" : "opacity-0 scale-90"
+                      isActive
+                        ? "opacity-100 bg-current scale-100"
+                        : "opacity-0 scale-90"
                     }`}
                   />
                   {item.label}
