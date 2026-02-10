@@ -6,7 +6,7 @@ slug: "from-zero-to-product-market-fit"
 tags: ["startup", "pmf", "mvp", "growth"]
 excerpt: "How we validated assumptions, reworked the roadmap, and landed our first 1k users without burning the runway."
 readTime: 6
-image: "/img/article-img-1.png"
+image: "/img/article2.png"
 ---
 
 ## Intro — quick vibes

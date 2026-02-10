@@ -6,7 +6,7 @@ slug: "hiring-for-culture-not-just-skills"
 tags: ["hiring", "culture", "team"]
 excerpt: "Why we rewrote our hiring process to focus on mindset, and how that cut onboarding time in half."
 readTime: 5
-image: "/img/article-img-1.png"
+image: "/img/article3.png"
 ---
 
 ## Why I changed how we hire

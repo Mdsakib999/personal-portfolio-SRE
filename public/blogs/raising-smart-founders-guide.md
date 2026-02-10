@@ -6,7 +6,7 @@ slug: "raising-smart-founders-guide"
 tags: ["fundraising", "investors", "seed"]
 excerpt: "Lessons from our seed round: term sheet traps, runway math, and investor alignment."
 readTime: 7
-image: "/img/article-img-1.png"
+image: "/img/article4.png"
 ---
 
 ## Start with alignment, not valuation

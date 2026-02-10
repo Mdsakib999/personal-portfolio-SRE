@@ -10,16 +10,24 @@ export default function ContactForm() {
     phone: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("submit", form);
+    setSubmitted(true);
+
+    // optional: reset after 2 seconds
+    setTimeout(() => setSubmitted(false), 2000);
+    // console.log("submit", form);
   };
 
   return (
-    <section className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative overflow-x-hidden">
+    <section
+      id="contact"
+      className="min-h-screen w-full flex items-center justify-center px-6 md:px-12 relative overflow-x-hidden"
+    >
       {/* --- LEFT / RIGHT blurred blobs (half off-screen) --- */}
       <div aria-hidden="true" className="pointer-events-none -z-20">
         {/* left blob: sits vertically centered, pushed left so half is off-canvas */}
@@ -129,6 +137,11 @@ export default function ContactForm() {
               >
                 Send
               </button>
+              {submitted && (
+                <span className="p text-green-500 text-sm font-medium ">
+                  Message sent!
+                </span>
+              )}
             </div>
           </form>
         </div>

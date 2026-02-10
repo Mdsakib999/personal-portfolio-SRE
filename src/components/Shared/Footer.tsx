@@ -1,5 +1,12 @@
 "use client";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -21,11 +28,11 @@ export default function Footer() {
 
             <div>
               <a
-                href="mailto:hello@thirdweb.studio"
+                href="mailto:shahriar@smitsolution.com.bd"
                 className="inline-flex items-center gap-3 text-white text-lg md:text-xl font-medium hover:underline"
                 aria-label="Email hello at thirdweb studio"
               >
-                <span>hello@thirdweb.studio</span>
+                <span>Shahriar@smitsolution.com.bd</span>
                 <svg
                   className="w-5 h-5 transform transition-transform duration-150 group-hover:translate-x-1"
                   fill="none"
@@ -43,50 +50,107 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
             {/* Our projects */}
-            <nav aria-label="Our projects" className="md:col-span-1">
+            {/* <nav aria-label="Our projects" className="md:col-span-1">
               <h4 className="text-lg font-semibold text-gray-300 mb-4">
                 Our projects
               </h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Travels
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Foods
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#ventures" className="hover:text-white">
                     SM Auto
                   </Link>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
             {/* Follow us */}
             <nav aria-label="Follow us" className="md:col-span-1">
               <h4 className="text-lg font-semibold text-gray-300 mb-4">
                 Follow us
               </h4>
               <ul className="space-y-3 text-gray-300">
-                <li>
-                  <Link href="#" className="hover:text-white">
+                <li className="flex gap-2 items-center">
+                  <a
+                    href="https://www.facebook.com/smitsolution.uae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/smitsolution.uae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
                     Facebook
-                  </Link>
+                  </a>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
+                <li className="flex gap-2 items-center">
+                  <a
+                    href="https://www.instagram.com/smitsolution.uae/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/smitsolution.uae/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
                     Instagram
-                  </Link>
+                  </a>
                 </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Dribbble
-                  </Link>
+                <li className="flex gap-2 items-center">
+                  <a
+                    href="https://x.com/smitsolutionuae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaXTwitter />
+                  </a>
+                  <a
+                    href="https://x.com/smitsolutionuae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    X
+                  </a>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <a
+                    href="https://www.linkedin.com/company/smitsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/smitsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    LinkedIn
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -97,17 +161,17 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/" className="hover:text-white">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#about" className="hover:text-white">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white">
+                  <Link href="/#contact" className="hover:text-white">
                     Contact
                   </Link>
                 </li>

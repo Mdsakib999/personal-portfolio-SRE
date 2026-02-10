@@ -1,5 +1,7 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useState } from "react";
 type Venture = {
   id: string;
   year: string;
@@ -10,35 +12,39 @@ type Venture = {
 };
 
 export default function VenturesOverview() {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const VENTURES: Venture[] = [
     {
       id: "v2025",
       year: "2025",
-      title: "SM FOODS",
+      title: "BiteBytes",
       desc: "Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.",
-      image: "/img/project-1.png",
+      image: "/ventures/sm-bitebytes.png",
       imageAlt: "colorful product hero",
     },
     {
       id: "v2024",
       year: "2024",
-      title: "SM Cars",
+      title: "SM Automobiles",
       desc: "Cut through the yawns, grab your audience’s attention, and turn passive attendees into active participants.",
-      image: "/img/project-2.png",
+      image: "/ventures/sm-car.png",
       imageAlt: "dark UI grid mockups",
     },
     {
       id: "v2023",
       year: "2023",
-      title: "Analyze",
+      title: "BY Transport Ltd.",
       desc: "Track the success of your events with deep insights and analytics measured across the entire attendee experience.",
-      image: "/img/project-1.png",
+      image: "/ventures/sm-pos.png",
       imageAlt: "analytics dashboard preview",
     },
   ];
 
   return (
-    <section className="py-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <section
+      className="py-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto"
+      id="ventures"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:items-start">
         {/* Heading on the right for large screens */}
         <header className="lg:col-start-9 lg:col-span-4 text-left lg:text-right">
@@ -65,13 +71,24 @@ export default function VenturesOverview() {
 
                 {/* Right: pill image spanning remaining cols */}
                 <div className="md:col-span-8 lg:col-span-8">
-                  <div className="rounded-[30px] overflow-hidden bg-white">
+                  <div
+                    className="rounded-[30px] overflow-hidden bg-white cursor-pointer"
+                    onMouseEnter={() => setExpandedId(v.id)}
+                    onMouseLeave={() => setExpandedId(null)}
+                    onClick={() =>
+                      setExpandedId(expandedId === v.id ? null : v.id)
+                    }
+                  >
                     <Image
                       src={v.image}
                       alt={v.imageAlt ?? v.title}
                       width={1200}
                       height={320}
-                      className="w-full h-[140px] sm:h-[160px] md:h-[180px] lg:h-[140px] object-cover"
+                      className={`w-full object-cover transition-all duration-500 ease-in-out ${
+                        expandedId === v.id
+                          ? "h-[240px] sm:h-[280px] md:h-[320px] lg:h-[280px] scale-105"
+                          : "h-[140px] sm:h-[160px] md:h-[180px] lg:h-[140px] scale-100"
+                      }`}
                     />
                   </div>
                 </div>

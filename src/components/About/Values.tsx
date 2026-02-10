@@ -16,23 +16,31 @@ export default function ValuesClient() {
   const ITEMS: ValueItem[] = [
     {
       id: "innovation",
-      title: "Innovation First",
+      title: "Innovation as a Culture",
       description:
-        "We pioneer, we don’t copy — inventing products that actually matter.",
-      imgAlt: "hand sketching wireframes",
+        "Fostering a workplace where creativity thrives and bold ideas are encouraged. We embrace experimentation and continuous improvement to stay ahead in a rapidly evolving world.",
+      imgAlt: "innovation and creativity",
     },
     {
-      id: "people",
-      title: "People Over Profit",
-      description: "Human impact drives every decision. Stronger together.",
-      imgAlt: "people collaborating over a desk",
+      id: "integrity",
+      title: "Integrity in Leadership",
+      description:
+        "Leading with transparency, accountability, and ethical decision-making. Building trust through consistent actions that align with our values and commitments.",
+      imgAlt: "leadership and integrity",
     },
     {
-      id: "collab",
-      title: "Collaboration Wins",
+      id: "global",
+      title: "Global Vision with Local Impact",
       description:
-        "Cross-discipline teamwork makes better outcomes for everyone.",
-      imgAlt: "teamwork hands together",
+        "Thinking globally while acting locally. Creating solutions that scale internationally while making meaningful differences in the communities we serve.",
+      imgAlt: "global vision local impact",
+    },
+    {
+      id: "empowering",
+      title: "Empowering Youth Entrepreneurs",
+      description:
+        "Investing in the next generation of leaders and innovators. Providing mentorship, resources, and opportunities for young entrepreneurs to turn their dreams into reality.",
+      imgAlt: "empowering youth entrepreneurs",
     },
   ];
 
@@ -56,8 +64,21 @@ export default function ValuesClient() {
   }, [ITEMS.length]);
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-20 h-screen  flex flex-col justify-center">
-      <h2 className="text-5xl md:text-6xl font-semibold mb-10">Core Values</h2>
+    <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-20 min-h-screen flex flex-col justify-center">
+      {/* Header Section */}
+      <div className="mb-12">
+        <h2 className="text-5xl md:text-6xl font-semibold mb-6">
+          Leading With Purpose
+        </h2>
+        <p className="text-lg md:text-xl text-foreground/85 max-w-4xl">
+          As CEO, Md Shariar Rahman leads with a philosophy rooted in
+          innovation, empathy, and strategic growth. He believes that great
+          leadership is about empowering teams, nurturing creativity, and
+          building systems that scale with integrity.
+        </p>
+      </div>
+
+      <h3 className="text-3xl md:text-4xl font-semibold mb-8">Core Values</h3>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center">
         {/* left list */}
@@ -71,7 +92,7 @@ export default function ValuesClient() {
                     onClick={() => setActiveIndex(i)}
                     className={`w-full text-left focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-400 transition-colors
                       ${isActive ? " font-semibold " : "text-slate-500"} 
-                      text-2xl md:text-3xl`}
+                      text-xl md:text-2xl`}
                     aria-pressed={isActive}
                     aria-current={isActive ? "true" : "false"}
                   >

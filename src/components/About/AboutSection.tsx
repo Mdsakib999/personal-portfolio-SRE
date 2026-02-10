@@ -37,9 +37,11 @@ export default function AboutSection() {
         </div>
         <p className="text-lg text-foreground/80 mb-6 max-w-xl text-start md:text-right">
           passionate about creating applications that make everyday life feel a
-          bit lighter—tools that just work, quietly in the background.passionate
-          about creating applications that make everyday life feel a bit
-          lighter—tools that just work, quietly in the background.
+          bit lighter—tools that just work, quietly in the background. From our
+          humble beginnings as a tech startup, our journey has been nothing
+          short of remarkable. What drives us? A passionate team of experts and
+          a clear, unwavering vision. We're excited to continue delivering
+          transformative tech solutions across diverse industries in the future.
         </p>
       </div>
     </section>

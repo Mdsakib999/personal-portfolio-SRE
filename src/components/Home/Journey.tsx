@@ -1,15 +1,21 @@
 import { cn } from "@/lib/utils";
 import { GridPattern } from "../magicui/grid-pattern";
 import Image from "next/image";
+import Link from "next/link";
 
 const ventures = [
   {
     year: "2025",
     items: [
       {
-        name: "SM Foods",
+        name: "BiteBytes",
+        desc: "A modern cloud kitchen venture delivering fresh, homemade flavors with efficiency and tech-driven convenience. Focused on bringing restaurant-quality meals straight to your doorstep.",
+        img: "/ventures/sm-bitebytes.png",
+      },
+      {
+        name: "SM Travel",
         desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/img/article-img-2.png",
+        img: "/ventures/sm-travel-solution.png",
       },
     ],
   },
@@ -17,14 +23,14 @@ const ventures = [
     year: "2024",
     items: [
       {
-        name: "SM Travel",
+        name: "SM Automobiles",
         desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/img/article-img-1.png",
+        img: "/ventures/sm-car.png",
       },
       {
-        name: "SM Auto",
-        desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
-        img: "/img/article-img-2.png",
+        name: "SM POS",
+        desc: "An innovative car bidding platform where buyers can bid based on their plans and vendors can list vehicles with verified details—making the buying and selling experience transparent and engaging.",
+        img: "/ventures/sm-pos.png",
       },
     ],
   },
@@ -83,11 +89,13 @@ export default function Journey() {
           ))}
 
           {/* CTA */}
-          <div className="flex justify-center pt-10">
-            <button className="px-6 py-3 bg-white text-black rounded-full shadow hover:scale-105 transition">
-              Explore More
-            </button>
-          </div>
+          <Link href="/about#ventures">
+            <div className="flex justify-center pt-10">
+              <button className="px-6 py-3 bg-white text-black rounded-full shadow hover:scale-105 transition">
+                Explore More
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
