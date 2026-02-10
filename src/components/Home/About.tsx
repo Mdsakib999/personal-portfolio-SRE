@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Button } from "../ui/button";
 import Link from "next/link";
 export default function About() {
@@ -32,6 +32,12 @@ export default function About() {
             className="p-2 rounded-full border hover:bg-foreground/10"
           >
             <FaTwitter />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-full border hover:bg-foreground/10"
+          >
+            <FaLinkedinIn />
           </a>
         </div>
         <div className="w-full flex justify-center md:justify-start">
