@@ -13,7 +13,7 @@ export default function page() {
       <Values />
       <RevenueStats />
       <VenturesOverview />
-      <MediaPress />s
+      <MediaPress />
       <Quote />
       <ContactForm />
     </div>
