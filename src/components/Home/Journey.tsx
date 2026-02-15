@@ -5,6 +5,16 @@ import Link from "next/link";
 
 const ventures = [
   {
+    year: "2026",
+    items: [
+      {
+        name: "BnpCandidates",
+        desc: "A dedicated platform built around the 2026 national election in Bangladesh. It presents detailed profiles of BNP candidates and key party figures, while offering an interactive feature that lets supporters generate personalized photo frames with their preferred leaders.",
+        img: "/ventures/sm-bnp.png",
+      },
+    ],
+  },
+  {
     year: "2025",
     items: [
       {
@@ -49,7 +59,7 @@ export default function Journey() {
           y={-1}
           strokeDasharray={"4 2"}
           className={cn(
-            "absolute inset-0 -z-10 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+            "absolute inset-0 -z-10 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
           )}
         />
 
