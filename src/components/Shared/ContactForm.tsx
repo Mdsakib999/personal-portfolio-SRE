@@ -130,15 +130,19 @@ export default function ContactForm() {
                 className="w-full bg-transparent border-b border-foreground/20 py-3 resize-none placeholder-foreground/30 focus:outline-none focus:border-foreground transition-colors"
               />
             </div>
-            <div className="mt-8 flex justify-end">
+            <div className="mt-8 flex items-center justify-end gap-4">
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 border border-foreground/20 text-foreground/90 px-6 py-2 rounded-full text-sm hover:bg-foreground/5 transition"
+                className="cursor-pointer group relative overflow-hidden border border-slate-300 dark:border-slate-700 px-6 py-2 rounded-full text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-300/40 dark:hover:shadow-slate-900/40"
               >
-                Send
+                <span className="absolute inset-0 bg-slate-900 dark:bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white dark:group-hover:text-slate-900">
+                  Send
+                </span>
               </button>
+
               {submitted && (
-                <span className="p text-green-500 text-sm font-medium ">
+                <span className="text-green-500 text-sm font-medium whitespace-nowrap">
                   Message sent!
                 </span>
               )}

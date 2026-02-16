@@ -183,7 +183,7 @@ export default function Footer() {
         {/* bottom small copyright row */}
         <div className="mt-10 border-t border-white/6 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            © 2025 Shahriar Rahman. All rights reserved.
+            © {new Date().getFullYear()} Shahriar Rahman. All rights reserved.
           </p>
         </div>
       </div>
