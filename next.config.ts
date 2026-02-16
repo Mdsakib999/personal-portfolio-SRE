@@ -1,16 +1,28 @@
-import type { NextConfig } from "next";
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true
+  }
+}
+export default nextConfig
 
-const nextConfig: NextConfig = {
-  /* config options here */
-    images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.pexels.com",
-      },
-    ],
-  },
+
+
+
+
+// import type { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+//   /* config options here */
+//     images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "images.pexels.com",
+//       },
+//     ],
+//   },
  
-};
+// };
 
-export default nextConfig;
+// export default nextConfig;
