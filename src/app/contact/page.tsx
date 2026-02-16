@@ -132,9 +132,12 @@ export default function ContactPage() {
           <div>
             <button
               type="submit"
-              className="bg-[#0f1b2a] text-white rounded-full px-6 py-4 text-lg hover:opacity-95 transition"
+              className="cursor-pointer group relative overflow-hidden border border-slate-300 dark:border-slate-700 px-6 py-4 rounded-full text-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-300/40 dark:hover:shadow-slate-900/40"
             >
-              Leave us a Message
+              <span className="absolute inset-0 bg-slate-900 dark:bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-white dark:group-hover:text-slate-900">
+                Leave us a Message
+              </span>
             </button>
           </div>
         </form>
