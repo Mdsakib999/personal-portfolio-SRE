@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { GridPattern } from "../magicui/grid-pattern";
@@ -22,7 +22,7 @@ export default function AboutSection() {
           "opacity-40 dark:opacity-20",
           "text-slate-900/10 dark:text-white/5",
           "[mask-image:linear-gradient(to_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_85%)]",
-          "[webkit-mask-image:linear-gradient(to_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_85%)]"
+          "[webkit-mask-image:linear-gradient(to_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_85%)]",
         )}
       >
         <GridPattern
@@ -74,7 +74,7 @@ export default function AboutSection() {
                   alt="Shahriar Rahman - CEO"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                  src="shahriar.jpg"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   priority
                 />
@@ -86,8 +86,12 @@ export default function AboutSection() {
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 sm:-bottom-0 sm:-right-0 bg-white dark:bg-zinc-800 rounded-2xl shadow-xl p-4 sm:p-5 border-2 border-slate-400 dark:border-slate-500">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl p-2 font-black text-slate-600 dark:text-slate-400">3+</div>
-                  <div className="text-xs sm:text-sm font-bold text-zinc-600 dark:text-zinc-300">Years</div>
+                  <div className="text-2xl sm:text-3xl p-2 font-black text-slate-600 dark:text-slate-400">
+                    3+
+                  </div>
+                  <div className="text-xs sm:text-sm font-bold text-zinc-600 dark:text-zinc-300">
+                    Years
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,22 +101,28 @@ export default function AboutSection() {
           <div className="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-8">
             {/* Quote/Intro */}
             <div className="relative">
-              <div className="absolute -left-4 top-0 text-6xl sm:text-7xl font-black text-slate-500/20 dark:text-slate-400/20 leading-none">"</div>
+              <div className="absolute -left-4 top-0 text-6xl sm:text-7xl font-black text-slate-500/20 dark:text-slate-400/20 leading-none">
+                "
+              </div>
               <p className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-relaxed text-zinc-800 dark:text-zinc-100 pl-8 sm:pl-12">
-                passionate about creating applications that make everyday life feel a bit lighter
+                passionate about creating applications that make everyday life
+                feel a bit lighter
               </p>
             </div>
 
             {/* Main description */}
             <div className="space-y-5">
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-zinc-600 dark:text-zinc-300">
-                —tools that just work, quietly in the background. From our humble beginnings as a tech startup,
-                our journey has been nothing short of remarkable.
+                —tools that just work, quietly in the background. From our
+                humble beginnings as a tech startup, our journey has been
+                nothing short of remarkable.
               </p>
 
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-zinc-600 dark:text-zinc-300">
-                What drives us? A passionate team of experts and a clear, unwavering vision. We're excited to
-                continue delivering transformative tech solutions across diverse industries in the future.
+                What drives us? A passionate team of experts and a clear,
+                unwavering vision. We're excited to continue delivering
+                transformative tech solutions across diverse industries in the
+                future.
               </p>
             </div>
 
@@ -121,24 +131,36 @@ export default function AboutSection() {
               <div className="relative group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-400 to-gray-500 opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 rounded-xl transition-opacity duration-300"></div>
                 <div className="relative p-4 sm:p-6 bg-white/50 dark:bg-zinc-800/50 backdrop-blur-sm rounded-xl border border-zinc-200 dark:border-zinc-700 group-hover:border-slate-400 dark:group-hover:border-slate-500 transition-all duration-300">
-                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">50+</div>
-                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Projects</div>
+                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">
+                    50+
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    Projects
+                  </div>
                 </div>
               </div>
 
               <div className="relative group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-400 to-gray-500 opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 rounded-xl transition-opacity duration-300"></div>
                 <div className="relative p-4 sm:p-6 bg-white/50 dark:bg-zinc-800/50 backdrop-blur-sm rounded-xl border border-zinc-200 dark:border-zinc-700 group-hover:border-slate-400 dark:group-hover:border-slate-500 transition-all duration-300">
-                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">25+</div>
-                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Clients</div>
+                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">
+                    25+
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    Clients
+                  </div>
                 </div>
               </div>
 
               <div className="relative group cursor-pointer col-span-2 sm:col-span-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-400 to-gray-500 opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 rounded-xl transition-opacity duration-300"></div>
                 <div className="relative p-4 sm:p-6 bg-white/50 dark:bg-zinc-800/50 backdrop-blur-sm rounded-xl border border-zinc-200 dark:border-zinc-700 group-hover:border-slate-400 dark:group-hover:border-slate-500 transition-all duration-300">
-                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">100%</div>
-                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Satisfaction</div>
+                  <div className="text-3xl sm:text-4xl font-black text-zinc-900 dark:text-white mb-1">
+                    100%
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    Satisfaction
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,14 +184,19 @@ export default function AboutSection() {
       </div>
 
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
-        
+        @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap");
+
         section {
-          font-family: 'Sora', system-ui, -apple-system, sans-serif;
+          font-family:
+            "Sora",
+            system-ui,
+            -apple-system,
+            sans-serif;
         }
 
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) scale(1);
           }
           50% {

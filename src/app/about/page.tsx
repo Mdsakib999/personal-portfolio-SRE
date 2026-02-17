@@ -1,5 +1,6 @@
 import AboutSection from "@/components/About/AboutSection";
 import MediaPress from "@/components/About/MediaPress";
+import OfficeGallery from "@/components/About/OfficeGallery";
 import Quote from "@/components/About/Quote";
 import RevenueStats from "@/components/About/RevenueStats";
 import Values from "@/components/About/Values";
@@ -10,6 +11,7 @@ export default function page() {
   return (
     <div className="">
       <AboutSection />
+      <OfficeGallery />
       <Values />
       <RevenueStats />
       <VenturesOverview />
