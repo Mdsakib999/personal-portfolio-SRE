@@ -8,11 +8,13 @@ export default function Banner() {
   return (
     <div className="relative h-screen  flex size-full items-center justify-center overflow-hidden rounded-lg bg-background p-20">
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
-        <h1 className="text-7xl font-semibold">Md Shariar Rahaman</h1>
-        <p className="text-xl text-muted-foreground mt-4 mx-4">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold">
+          Md Shariar Rahaman
+        </h1>
+        <p className="text-xl text-muted-foreground mt-4 mx-4 px-5 sm:px-2 md:px-0">
           Entrepreneur & Visionary Leader
         </p>
-        <p className="text-sm text-gray-700 dark:text-white mt-2 mb-4">
+        <p className="text-sm text-gray-700 dark:text-white mt-2 mb-4 px-5 sm:px-2 md:px-0">
           Turning ideas into scalable businesses and lasting impact.
         </p>
         <Link href="#ventures">
@@ -41,7 +43,7 @@ export default function Banner() {
         y={-1}
         strokeDasharray={"4 2"}
         className={cn(
-          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
         )}
       />
     </div>

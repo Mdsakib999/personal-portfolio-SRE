@@ -16,8 +16,8 @@ export default function Quote() {
           {/* content (on top) */}
           <div className="relative z-10 h-full w-full flex items-center justify-center px-6">
             <div className="max-w-3xl text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
-                ““Entrepreneurship isn’t about running companies — it’s about
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+                “Entrepreneurship isn’t about running companies — it’s about
                 creating opportunities that outlive you.”
               </h1>
 
