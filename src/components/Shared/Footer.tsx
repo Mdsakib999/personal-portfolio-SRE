@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className=" px-6 md:px-12 pb-8 pt-[-8px]">
+    <footer className=" px-6 md:px-12 pb-8 pt-[-8px] mt-20">
       {/* outer rounded card */}
       <div className="max-w-7xl bg-[#10182b] mx-auto rounded-2xl border md:py-12 py-8 px-6 md:px-12  shadow-md">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -51,29 +51,6 @@ export default function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-            {/* Our projects */}
-            {/* <nav aria-label="Our projects" className="md:col-span-1">
-              <h4 className="text-lg font-semibold text-gray-300 mb-4">
-                Our projects
-              </h4>
-              <ul className="space-y-3 text-gray-300">
-                <li>
-                  <Link href="/#ventures" className="hover:text-white">
-                    SM Travels
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#ventures" className="hover:text-white">
-                    SM Foods
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#ventures" className="hover:text-white">
-                    SM Auto
-                  </Link>
-                </li>
-              </ul>
-            </nav> */}
             {/* Follow us */}
             <nav aria-label="Follow us" className="md:col-span-1">
               <h4 className="text-lg font-semibold text-gray-300 mb-4">
@@ -153,7 +130,6 @@ export default function Footer() {
                     X
                   </a>
                 </li> */}
-                
               </ul>
             </nav>
             {/* Quick Links */}

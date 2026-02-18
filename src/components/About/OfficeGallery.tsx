@@ -30,7 +30,7 @@ const MEDIA: MediaItem[] = [
     id: 1,
     type: "video",
     src: "https://res.cloudinary.com/dvwhbp6vw/video/upload/v1769684187/smitOffice_pcmjnz.mp4",
-    thumb: "/office/office1.jpg",
+    thumb: "office/eightballpool.png",
     caption: "Office Tour",
     location: "SM IT, Dhaka",
     colSpan: 2,
@@ -291,7 +291,7 @@ export default function OfficeGallery() {
             { value: "15+", label: "Team Members" },
             { value: "2022", label: "Established" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
+            <div key={stat.label} className="text-center">
               <div className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">
                 {stat.value}
               </div>
