@@ -151,14 +151,14 @@ export default function MediaPress() {
       {/* Featured In Section */}
       <div className="pt-12 border-t border-foreground/20">
         <div className="text-center">
-          <p className="text-sm uppercase tracking-wider text-slate-500 mb-8">
+          <p className="text-sm uppercase tracking-wider text-slate-600 dark:text-white mb-8">
             Featured in
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12">
             {FEATURED_IN.map((outlet, idx) => (
               <span
                 key={idx}
-                className="text-2xl md:text-3xl font-bold text-slate-300 hover:text-slate-800 transition-colors cursor-pointer"
+                className="text-2xl md:text-3xl font-bold text-slate-500 dark:text-slate-300 hover:text-slate-800 transition-colors cursor-pointer"
               >
                 {outlet}
               </span>

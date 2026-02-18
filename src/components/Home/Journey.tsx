@@ -48,8 +48,8 @@ const ventures = [
 
 export default function Journey() {
   return (
-    <div className="relative max-w-7xl mx-auto pt-20 px-6">
-      <h1 className="text-5xl md:text-6xl font-semibold mb-16">Journey</h1>
+    <div className="relative max-w-7xl mx-auto pt-20 px-4 sm:px-6">
+      <h1 className="text-4xl md:text-6xl font-semibold mb-16">Journey</h1>
 
       <div className="relative">
         <GridPattern
@@ -59,7 +59,7 @@ export default function Journey() {
           y={-1}
           strokeDasharray={"4 2"}
           className={cn(
-            "absolute inset-0 -z-10 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+            "absolute inset-0 -z-10 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
           )}
         />
 
@@ -70,27 +70,40 @@ export default function Journey() {
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               {/* Year */}
-              <div className="text-2xl font-light ">{venture.year}</div>
+              <div className="text-xl md:text-2xl font-light">
+                {venture.year}
+              </div>
 
-              {/* Ventures in this year */}
-              <div className="flex flex-col gap-10 col-span-2">
+              {/* Ventures */}
+              <div className="flex flex-col gap-10 md:col-span-2">
                 {venture.items.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col md:flex-row md:items-start gap-6"
+                    className="
+                      flex flex-col gap-4
+                      md:flex-row md:items-start md:gap-6
+                    "
                   >
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold">{item.name}</h3>
-                      <p className="text-gray-400 mt-2">{item.desc}</p>
+                    {/* image -> full width on mobile */}
+                    <div className="w-full md:w-auto order-1 md:order-2">
+                      <div className="relative w-full md:w-[300px] h-[200px] overflow-hidden border rounded-2xl bg-slate-800">
+                        <Image
+                          src={item.img}
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                    <div className="flex-shrink-0 border rounded-2xl bg-slate-800">
-                      <Image
-                        src={item.img}
-                        alt={item.name}
-                        width={300}
-                        height={200}
-                        className="rounded-lg"
-                      />
+
+                    {/* text */}
+                    <div className="flex-1 order-2 md:order-1">
+                      <h3 className="text-lg md:text-xl font-semibold">
+                        {item.name}
+                      </h3>
+                      <p className="text-gray-400 mt-2 text-sm md:text-base">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -101,8 +114,20 @@ export default function Journey() {
           {/* CTA */}
           <Link href="/about#ventures">
             <div className="flex justify-center pt-10">
-              <button className="px-6 py-3 bg-white text-black rounded-full shadow hover:scale-105 transition">
-                Explore More
+              <button className="cursor-pointer group relative overflow-hidden text-foreground border border-slate-300 dark:border-slate-700 px-6 py-3 rounded-full flex items-center justify-center whitespace-nowrap text-sm md:text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-300/40 dark:hover:shadow-slate-900/40">
+                <span className="absolute inset-0 bg-slate-900 dark:bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white dark:group-hover:text-slate-900">
+                  Explore More
+                </span>
+                <svg
+                  className="relative z-10 w-4 h-4 ml-2 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110 group-hover:text-white dark:group-hover:text-slate-900"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             </div>
           </Link>
