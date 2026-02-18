@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const socials = [
   {
     icon: FaFacebookF,
-    href: "https://www.facebook.com/smitsolution.uae",
+    href: "https://www.facebook.com/Shahriar.rahma",
     label: "Facebook",
   },
   {
@@ -20,7 +20,7 @@ const socials = [
   },
   {
     icon: FaLinkedin,
-    href: "https://www.linkedin.com/company/smitsolution/",
+    href: "https://www.linkedin.com/in/shariar-rahman",
     label: "LinkedIn",
   },
 ];

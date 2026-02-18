@@ -24,7 +24,7 @@ const ventures = [
       },
       {
         name: "SM Travel",
-        desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
+        desc: "Passionate about creating applications that make everyday life feel a bit lighter — tools that just work.",
         img: "/ventures/sm-travel-solution.png",
       },
     ],
@@ -34,104 +34,161 @@ const ventures = [
     items: [
       {
         name: "SM Automobiles",
-        desc: "passionate about creating applications that make everyday life feel a bit lighter—tools that just work.",
+        desc: "Passionate about creating applications that make everyday life feel a bit lighter — tools that just work.",
         img: "/ventures/sm-car.png",
       },
       {
         name: "SM POS",
-        desc: "An innovative car bidding platform where buyers can bid based on their plans and vendors can list vehicles with verified details—making the buying and selling experience transparent and engaging.",
+        desc: "An innovative car bidding platform where buyers can bid based on their plans and vendors can list vehicles with verified details — making the buying and selling experience transparent and engaging.",
         img: "/ventures/sm-pos.png",
       },
     ],
   },
 ];
 
+const totalVentures = ventures.reduce((acc, v) => acc + v.items.length, 0);
+
 export default function Journey() {
+  let globalIndex = 0;
+
   return (
-    <div className="relative max-w-7xl mx-auto pt-20 px-4 sm:px-6">
-      <h1 className="text-4xl md:text-6xl font-semibold mb-16">Journey</h1>
-
-      <div className="relative">
+    <div className="relative min-h-screen max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-24 pb-24">
+      {/* Grid background */}
+      <div
+        className={cn(
+          "pointer-events-none absolute inset-0 -z-10 opacity-[0.07] dark:opacity-[0.12]",
+          "[mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,black_30%,transparent_100%)]",
+        )}
+      >
         <GridPattern
-          width={60}
-          height={90}
-          x={-1}
-          y={-1}
+          width={40}
+          height={40}
           strokeDasharray={"4 2"}
-          className={cn(
-            "absolute inset-0 -z-10 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
-          )}
+          className="w-full h-full"
         />
+      </div>
 
-        <div className="space-y-10 max-w-5xl mx-auto">
-          {ventures.map((venture) => (
-            <div
-              key={venture.year}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            >
-              {/* Year */}
-              <div className="text-xl md:text-2xl font-light">
-                {venture.year}
-              </div>
+      {/* Header */}
+      <div className="mb-20">
+        <p className="text-[11px] uppercase tracking-[0.35em] text-black/35 dark:text-white/35 mb-5 flex items-center gap-3">
+          <span className="inline-block w-6 h-px bg-black/30 dark:bg-white/30" />
+          Ventures
+        </p>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <h1 className="font-serif text-5xl md:text-7xl font-medium leading-[1.05] tracking-tight text-black dark:text-white">
+            The
+            <br />
+            <em className="text-black/40 dark:text-white/40">Journey.</em>
+          </h1>
+          <p className="text-[11px] uppercase tracking-[0.3em] text-black/25 dark:text-white/25 tabular-nums md:pb-3">
+            {String(totalVentures).padStart(2, "0")} ventures
+          </p>
+        </div>
+      </div>
 
-              {/* Ventures */}
-              <div className="flex flex-col gap-10 md:col-span-2">
-                {venture.items.map((item, idx) => (
+      {/* Full-width top rule */}
+      <div className="w-full h-px bg-black/10 dark:bg-white/10 mb-0" />
+
+      {/* Timeline */}
+      <div className="divide-y divide-black/8 dark:divide-white/8">
+        {ventures.map((group) => (
+          <div
+            key={group.year}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-0"
+          >
+            {/* Year column */}
+            <div className="lg:col-span-2 py-10 lg:py-14 lg:pr-8 flex lg:flex-col lg:justify-start gap-4 lg:gap-0">
+              <span className="font-serif text-4xl md:text-5xl font-medium text-black/10 dark:text-white/10 leading-none tabular-nums">
+                {group.year}
+              </span>
+            </div>
+
+            {/* Thin vertical separator on desktop */}
+            <div className="hidden lg:block lg:col-span-1">
+              <div className="h-full w-px bg-black/8 dark:bg-white/8 mx-auto" />
+            </div>
+
+            {/* Ventures in this year */}
+            <div className="lg:col-span-9 lg:pl-10 divide-y divide-black/5 dark:divide-white/5">
+              {group.items.map((item) => {
+                globalIndex++;
+                const idx = String(globalIndex).padStart(2, "0");
+
+                return (
                   <div
-                    key={idx}
-                    className="
-                      flex flex-col gap-4
-                      md:flex-row md:items-start md:gap-6
-                    "
+                    key={item.name}
+                    className="group py-10 lg:py-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-start"
                   >
-                    {/* image -> full width on mobile */}
-                    <div className="w-full md:w-auto order-1 md:order-2">
-                      <div className="relative w-full md:w-[300px] h-[200px] overflow-hidden border rounded-2xl bg-slate-800">
+                    {/* Text */}
+                    <div className="md:col-span-7 flex flex-col gap-4">
+                      <div className="flex items-center gap-4">
+                        <span className="text-[10px] tabular-nums tracking-[0.2em] text-black/20 dark:text-white/20">
+                          {idx}
+                        </span>
+                        <span className="w-4 h-px bg-black/15 dark:bg-white/15" />
+                        <h3 className="font-serif text-2xl md:text-3xl font-medium text-black dark:text-white leading-snug">
+                          {item.name}
+                        </h3>
+                      </div>
+                      <p className="text-base text-black/50 dark:text-white/50 leading-relaxed max-w-md">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Image */}
+                    <div className="md:col-span-5">
+                      <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden bg-black/5 dark:bg-white/5 border border-black/8 dark:border-white/8">
                         <Image
                           src={item.img}
                           alt={item.name}
                           fill
-                          className="object-cover"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 400px"
                         />
+                        {/* Hover overlay */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                       </div>
                     </div>
-
-                    {/* text */}
-                    <div className="flex-1 order-2 md:order-1">
-                      <h3 className="text-lg md:text-xl font-semibold">
-                        {item.name}
-                      </h3>
-                      <p className="text-gray-400 mt-2 text-sm md:text-base">
-                        {item.desc}
-                      </p>
-                    </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
 
-          {/* CTA */}
-          <Link href="/about#ventures">
-            <div className="flex justify-center pt-10">
-              <button className="cursor-pointer group relative overflow-hidden text-foreground border border-slate-300 dark:border-slate-700 px-6 py-3 rounded-full flex items-center justify-center whitespace-nowrap text-sm md:text-base transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-300/40 dark:hover:shadow-slate-900/40">
-                <span className="absolute inset-0 bg-slate-900 dark:bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-white dark:group-hover:text-slate-900">
-                  Explore More
-                </span>
-                <svg
-                  className="relative z-10 w-4 h-4 ml-2 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110 group-hover:text-white dark:group-hover:text-slate-900"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </Link>
-        </div>
+      {/* Bottom rule */}
+      <div className="w-full h-px bg-black/10 dark:bg-white/10 mt-0 mb-14" />
+
+      {/* CTA */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <span className="text-[10px] uppercase tracking-[0.35em] text-black/20 dark:text-white/20">
+          Md Shariar Rahman
+        </span>
+
+        <Link
+          href="/about#ventures"
+          className="group flex items-center gap-3 border border-black/15 dark:border-white/15 hover:border-black/40 dark:hover:border-white/40 rounded-full px-6 py-3 transition-all duration-300 hover:-translate-y-px"
+        >
+          <span className="text-[11px] uppercase tracking-[0.25em] text-black/50 dark:text-white/50 group-hover:text-black dark:group-hover:text-white transition-colors duration-200">
+            Explore More
+          </span>
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            className="text-black/30 dark:text-white/30 group-hover:text-black dark:group-hover:text-white transition-all duration-200 group-hover:translate-x-0.5"
+          >
+            <path
+              d="M2 6H10M7 3L10 6L7 9"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Link>
       </div>
     </div>
   );
