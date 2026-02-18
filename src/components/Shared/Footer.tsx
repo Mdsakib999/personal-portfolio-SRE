@@ -28,11 +28,11 @@ export default function Footer() {
 
             <div>
               <a
-                href="mailto:shahriar@smitsolution.com.bd"
+                href="mailto:shariar@smitsolution.com.bd"
                 className="inline-flex items-center gap-3 text-white text-lg md:text-xl font-medium hover:underline"
                 aria-label="Email hello at thirdweb studio"
               >
-                <span>Shahriar@smitsolution.com.bd</span>
+                <span>Shariar@smitsolution.com.bd</span>
                 <svg
                   className="w-5 h-5 transform transition-transform duration-150 group-hover:translate-x-1"
                   fill="none"
@@ -77,42 +77,6 @@ export default function Footer() {
                 </li>
                 <li className="flex gap-2 items-center">
                   <a
-                    href="https://www.instagram.com/smitsolution.uae/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full border hover:bg-foreground/10"
-                  >
-                    <FaInstagram />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/smitsolution.uae/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    Instagram
-                  </a>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <a
-                    href="https://x.com/smitsolutionuae"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full border hover:bg-foreground/10"
-                  >
-                    <FaXTwitter />
-                  </a>
-                  <a
-                    href="https://x.com/smitsolutionuae"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    X
-                  </a>
-                </li>
-                <li className="flex gap-2 items-center">
-                  <a
                     href="https://www.linkedin.com/in/shariar-rahman/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -129,6 +93,43 @@ export default function Footer() {
                     LinkedIn
                   </a>
                 </li>
+
+                <li className="flex gap-2 items-center">
+                  <a
+                    href="https://www.instagram.com/smitsolution.uae/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/smitsolution.uae/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                {/* <li className="flex gap-2 items-center">
+                  <a
+                    href="https://x.com/smitsolutionuae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full border hover:bg-foreground/10"
+                  >
+                    <FaXTwitter />
+                  </a>
+                  <a
+                    href="https://x.com/smitsolutionuae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    X
+                  </a>
+                </li> */}
               </ul>
             </nav>
             {/* Quick Links */}
@@ -160,7 +161,7 @@ export default function Footer() {
         {/* bottom small copyright row */}
         <div className="mt-10 border-t border-white/6 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Shahriar Rahman. All rights reserved.
+            © {new Date().getFullYear()} Shariar Rahman. All rights reserved.
           </p>
         </div>
       </div>
