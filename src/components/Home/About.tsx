@@ -28,7 +28,7 @@ const socials = [
 const stats = [
   { value: "5+", label: "Ventures" },
   { value: "3+", label: "Years" },
-  { value: "15+", label: "Team" },
+  { value: "17+", label: "Team" },
 ];
 
 export default function About() {
