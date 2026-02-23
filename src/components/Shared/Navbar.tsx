@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { ThemeToggle } from "@/app/theme-toggle";
+import Image from "next/image";
+import logo from '../../../public/logo.png'
 
 export default function Navbar() {
   const pathname = usePathname() || "/";
@@ -53,9 +55,14 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link
             href="/"
-            className="text-xl md:text-xl font-semibold tracking-tight hover:opacity-90"
+            className="w-16 md:w-20 lg:w-28 text-xl md:text-xl font-semibold tracking-tight hover:opacity-90"
           >
-            sr.
+            <Image
+              className="dark:invert"
+              src={logo}
+              alt="shahriar logo"
+              width={150}
+              height={20} />
           </Link>
         </div>
 
@@ -67,17 +74,15 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`flex items-center text-sm transition-all py-1 px-1 ${
-                    isActive ? "font-medium" : "opacity-80 hover:opacity-100"
-                  }`}
+                  className={`flex items-center text-sm transition-all py-1 px-1 ${isActive ? "font-medium" : "opacity-80 hover:opacity-100"
+                    }`}
                 >
                   <span
                     aria-hidden
-                    className={`mr-2 inline-block w-2 h-2 rounded-full transition-all duration-200 transform ${
-                      isActive
-                        ? "opacity-100 bg-current scale-100"
-                        : "opacity-0 scale-90"
-                    }`}
+                    className={`mr-2 inline-block w-2 h-2 rounded-full transition-all duration-200 transform ${isActive
+                      ? "opacity-100 bg-current scale-100"
+                      : "opacity-0 scale-90"
+                      }`}
                   />
                   {item.label}
                 </Link>
