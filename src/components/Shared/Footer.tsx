@@ -1,12 +1,8 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import logo from '../../../public/logo.png'
 
 export default function Footer() {
   return (
@@ -16,9 +12,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-2xl md:text-3xl font-bold tracking-tight text-white">
-                sr.
-              </span>
+              <Link
+                href="/"
+                className="w-16 md:w-20 lg:w-28 text-xl md:text-xl font-semibold tracking-tight hover:opacity-90"
+              >
+                <Image className="invert" src={logo} alt="shahriar logo" width={150} height={20} />
+              </Link>
             </div>
 
             <p className="text-sm text-gray-300 max-w-sm leading-relaxed">
