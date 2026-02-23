@@ -47,7 +47,7 @@ export default function AboutSection() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
                 Meet <br />
                 <span className="relative inline-block mt-2">
-                  <span className="relative z-10">Shahriar Rahman</span>
+                  <span className="relative z-10">Shariar Rahman</span>
                   {/* Highlight effect */}
                   <span className="absolute bottom-2 left-0 w-full h-3 sm:h-4 bg-slate-300/40 dark:bg-slate-500/30 -rotate-1 -z-0"></span>
                 </span>

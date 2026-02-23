@@ -288,7 +288,7 @@ export default function OfficeGallery() {
         <div className="mt-14 sm:mt-16 pt-10 border-t border-gray-100 dark:border-gray-900 grid grid-cols-3 gap-4 sm:gap-8">
           {[
             { value: "2", label: "Office Locations" },
-            { value: "15+", label: "Team Members" },
+            { value: "17+", label: "Team Members" },
             { value: "2022", label: "Established" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
